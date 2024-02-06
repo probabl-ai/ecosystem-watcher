@@ -4,3 +4,4 @@ Jinja2
 humanize
 tenacity
 python-dotenv
+tqdm
