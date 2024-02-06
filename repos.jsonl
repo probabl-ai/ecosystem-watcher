@@ -17,3 +17,4 @@
 {"repo": "sktime/sktime", "pypi": "sktime"}
 {"repo": "JoaquinAmatRodrigo/skforecast", "pypi": "skforecast"}
 {"repo": "tslearn-team/tslearn", "pypi": "tslearn"}
+{"repo": "skorch-dev/skorch", "pypi": "skorch"}
