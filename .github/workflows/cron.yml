@@ -13,8 +13,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch latest data
       env:
-        GH_TOKEN:{{secrets.GH}}
-        PEPY_TOKEN:{{secrets.PEPY}}
+        GH_TOKEN:${{secrets.GH}}
+        PEPY_TOKEN:${{secrets.PEPY}}
       run: |-
         python -m pip install -r requirements
         python scripts/fetch.py
