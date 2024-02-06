@@ -1,0 +1,3 @@
+srsly
+requests
+Jinja2
