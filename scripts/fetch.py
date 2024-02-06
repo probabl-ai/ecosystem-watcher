@@ -4,15 +4,13 @@ import srsly
 import requests as rq 
 from tenacity import retry
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
-import os 
-
 
 
 @retry
 def fetch_pepy_info(project):
-    print(project)
     url = f"https://api.pepy.tech/api/v2/projects/{project}"
     headers = {"X-Api-Key": f"{os.environ.get('PEPY_TOKEN')}"}
     blob = rq.get(url, headers=headers).json()
@@ -32,7 +30,7 @@ def fetch_info(repo, project):
             n_contributors = len(rq.get(item['contributors_url'], headers=headers).json())
             result = {key: item[key] for key in RELEVANT_KEYS}
             return {**result, "n_contributors": n_contributors, **fetch_pepy_info(project)}
-intword
+
 g = tqdm(list(srsly.read_jsonl("repos.jsonl")))
-out_path = Path(__file__).parent.parent / "site" / "data.jsonl"
+out_path = Path(__file__).parent.parent / "docs" / "data.jsonl"
 srsly.write_jsonl(out_path, (fetch_info(ex['repo'], ex['pypi']) for ex in g))
