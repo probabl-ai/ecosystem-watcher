@@ -11,3 +11,6 @@
 {"repo": "skrub-data/skrub", "pypi": "skrub"}
 {"repo": "DistrictDataLabs/yellowbrick", "pypi": "yellowbrick"}
 {"repo": "ploomber/sklearn-evaluation", "pypi": "sklearn-evaluation"}
+{"repo": "parrt/dtreeviz", "pypi": "dtreeviz"}
+{"repo": "onnx", "pypi": "skl2onnx"}
+{"repo": "unit8co/darts", "pypi": "darts"}
