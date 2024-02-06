@@ -1,0 +1,168 @@
+<head>
+    <title>Scikit-Learn Ecosystem Overview</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms@0.5.7,typography@0.5.10,aspect-ratio@0.4.2,line-clamp@0.4.4"></script>
+    <script src="sortable.min.js"></script>
+</head>
+
+<div class="p-8">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+          <div class="sm:flex-auto">
+            <h1 class="text-base font-semibold leading-6 text-gray-900">Ecosystem packages for scikit-learn</h1>
+            <p class="mt-2 text-sm text-gray-700">A collection of known scikit-learn ecosystem packages with their stats.</p>
+            <p class="mt-2 text-sm text-gray-700">The underlying data of this table is also available <a class="font-bold" href="data.jsonl">for download here</a>.</p>
+          </div>
+          <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+            <a href="https://github.com/koaning/ecosystem-watcher/edit/main/repos.jsonl">
+                <button type="button" class="block rounded-md bg-green-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Add package</button>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 flow-root">
+          <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+              <table class="min-w-full divide-y divide-gray-300" data-sortable>
+                <thead>
+                  <tr>
+                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Name</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Github Stars</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Forks</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Open Issues</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Age</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Last Update</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Total Downloads</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Month Downloads</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">scikit-learn/scikit-learn</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">57310</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">25107</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2301</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">13 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">14 hours</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1.5 billion</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">49.8 million</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">scikit-learn-contrib/imbalanced-learn</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">6629</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1276</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">39</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">9 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">13 days</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">131.3 million</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">9.1 million</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">joblib/joblib</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">3565</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">439</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">412</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">13 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">14 hours</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1.2 billion</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">44.0 million</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">skops-dev/skops</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">394</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">49</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">35</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 year, 9 months</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">14 hours</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">170.9 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">26.8 thousand</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">koaning/scikit-lego</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1103</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">108</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">36</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">5 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">8 days</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">879.2 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">30.5 thousand</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">koaning/scikit-partial</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">35</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">0</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 year, 8 months</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 year, 8 months</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1.7 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">88</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">koaning/embetter</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">388</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">12</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">6</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">3 months</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">31.6 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1.9 thousand</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">koaning/human-learn</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">768</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">54</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">6</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">3 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">a month</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">41.8 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1.7 thousand</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">koaning/doubtlab</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">488</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">19</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1 year, 2 months</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">22.7 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">568</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">fairlearn/fairlearn</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">1737</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">382</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">166</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">5 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">14 hours</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4.4 million</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">220.6 thousand</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">skrub-data/skrub</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">961</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">85</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">55</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">5 years</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">14 hours</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2.2 thousand</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">365</td>
+                        </tr>
+                    
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>  
+    
+</div>

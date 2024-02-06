@@ -11,6 +11,8 @@ items = list(srsly.read_jsonl(data_path))
 for item in items:
     item['age'] = humanize.naturaldelta(dt.datetime.now() - dt.datetime.fromisoformat(item['created_at'][:10]))
     item['since_update'] = humanize.naturaldelta(dt.datetime.now() - dt.datetime.fromisoformat(item['pushed_at'][:10]))
+    item["total_downloads"] = humanize.intword(item["total_downloads"])
+    item["month_downloads"] = humanize.intword(item["month_downloads"])
 
 
 out_path = template_path.parent / "index.html" 
