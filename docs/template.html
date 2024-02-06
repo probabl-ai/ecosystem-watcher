@@ -2,7 +2,7 @@
     <title>Scikit-Learn Ecosystem Overview</title>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms@0.5.7,typography@0.5.10,aspect-ratio@0.4.2,line-clamp@0.4.4"></script>
-    <script src="sortable.min.js"></script>
+    <script src="/sortable.js"></script>
 </head>
 
 <div class="p-8">
@@ -22,30 +22,30 @@
         <div class="mt-8 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-              <table class="min-w-full divide-y divide-gray-300" data-sortable>
+              <table class="min-w-full divide-y divide-gray-300 sortable-theme-bootstrap" data-sortable>
                 <thead>
                   <tr>
-                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Name</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Github Stars</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Forks</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Open Issues</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Age</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Last Update</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Total Downloads</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Month Downloads</th>
+                    <th scope="col" class="cursor-pointer py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Name</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-right">Github Stars</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-right">Forks</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-right">Open Issues</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Age</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Last Update</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-right">Total Downloads</th>
+                    <th scope="col" class="cursor-pointer px-3 py-3.5 text-left text-sm font-semibold text-gray-900 text-right">Month Downloads</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
                     {% for item in items %}
                         <tr>
-                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{item.full_name}}</td>
-                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.stargazers_count}}</td>
-                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.forks}}</td>
-                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.open_issues}}</td>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{item.pip}}</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-right"><pre>{{item.stargazers_count}}</pre></td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-right"><pre>{{item.forks}}</pre></td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-right"><pre>{{item.open_issues}}</pre></td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.age}}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.since_update}}</td>
-                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.total_downloads}}</td>
-                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{item.month_downloads}}</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-right"><pre>{{item.total_downloads}}</pre></td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-right"><pre>{{item.month_downloads}}</pre></td>
                         </tr>
                     {% endfor %}
                 </tbody>

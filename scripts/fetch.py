@@ -30,7 +30,7 @@ def fetch_info(repo, project):
         if item["full_name"] == repo:
             n_contributors = len(rq.get(item['contributors_url'], headers=headers).json())
             result = {key: item[key] for key in RELEVANT_KEYS}
-            return {**result, "n_contributors": n_contributors, **fetch_pepy_info(project)}
+            return {**result, "pip": project, "n_contributors": n_contributors, **fetch_pepy_info(project)}
 
 g = tqdm(list(srsly.read_jsonl("repos.jsonl")))
 out_path = Path(__file__).parent.parent / "docs" / "data.jsonl"
