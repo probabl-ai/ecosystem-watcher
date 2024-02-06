@@ -1,7 +1,6 @@
 {"repo": "scikit-learn/scikit-learn", "pypi": "scikit-learn"}
 {"repo": "scikit-learn-contrib/imbalanced-learn", "pypi": "imbalanced-learn"}
 {"repo": "joblib/joblib", "pypi": "joblib"}
-{"repo": "soda-inria/hazardous", "pypi": "hazardous"}
 {"repo": "skops-dev/skops", "pypi": "skops"}
 {"repo": "koaning/scikit-lego", "pypi": "scikit-lego"}
 {"repo": "koaning/scikit-partial", "pypi": "scikit-partial"}

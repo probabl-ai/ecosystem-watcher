@@ -1,19 +1,38 @@
+from tqdm import tqdm 
 from pathlib import Path
 import srsly 
 import requests as rq 
+from tenacity import retry
+from dotenv import load_dotenv
 
-def fetch_github_search_info(repo):
-    RELEVANT_KEYS = ["full_name", "description", "forks", "open_issues", "stargazers_count", "created_at", "updated_at"]
+load_dotenv()
+import os 
+
+
+
+@retry
+def fetch_pepy_info(project):
+    print(project)
+    url = f"https://api.pepy.tech/api/v2/projects/{project}"
+    headers = {"X-Api-Key": f"{os.environ.get('PEPY_TOKEN')}"}
+    blob = rq.get(url, headers=headers).json()
+    last_30_days = list(blob['downloads'].keys())[-30:]
+    downloads_total = blob['total_downloads']
+    downloads_30d = sum([sum(blob['downloads'][date].values()) for date in last_30_days])
+    return {"total_downloads": downloads_total, "month_downloads": downloads_30d}
+
+@retry
+def fetch_info(repo, project):
+    RELEVANT_KEYS = ["full_name", "description", "forks", "open_issues", "stargazers_count", "created_at", "pushed_at"]
     url = f"https://api.github.com/search/repositories?q={repo}"
-    blob = rq.get(url).json()
-    if not blob.get("items", None):
-        print(blob)
+    headers = {"Authorization": f"Bearer {os.environ.get('GH_TOKEN')}"}
+    blob = rq.get(url, headers=headers).json()
     for item in blob["items"]:
         if item["full_name"] == repo:
-            n_contributors = len(rq.get(item['contributors_url']).json())
-            result = {**item, "n_contributors": n_contributors}
-            return {key: result[key] for key in RELEVANT_KEYS}
+            n_contributors = len(rq.get(item['contributors_url'], headers=headers).json())
+            result = {key: item[key] for key in RELEVANT_KEYS}
+            return {**result, "n_contributors": n_contributors, **fetch_pepy_info(project)}
 
-g = srsly.read_jsonl("repos.jsonl")
+g = tqdm(list(srsly.read_jsonl("repos.jsonl")))
 out_path = Path(__file__).parent.parent / "site" / "data.jsonl"
-srsly.write_jsonl(out_path, (fetch_github_search_info(ex['repo']) for ex in g))
+srsly.write_jsonl(out_path, (fetch_info(ex['repo'], ex['pypi']) for ex in g))
