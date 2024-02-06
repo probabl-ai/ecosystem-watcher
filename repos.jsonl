@@ -14,3 +14,6 @@
 {"repo": "parrt/dtreeviz", "pypi": "dtreeviz"}
 {"repo": "onnx", "pypi": "skl2onnx"}
 {"repo": "unit8co/darts", "pypi": "darts"}
+{"repo": "sktime/sktime", "pypi": "sktime"}
+{"repo": "JoaquinAmatRodrigo/skforecast", "pypi": "skforecast"}
+{"repo": "tslearn-team/tslearn", "pypi": "tslearn"}
