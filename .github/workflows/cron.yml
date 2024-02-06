@@ -1,9 +1,9 @@
-name: Kollekt GitHub
+name: Collect statistics
 
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 9 0 0 *'
+    - cron: '0 5 * * *'
 
 jobs:
   scheduled:
