@@ -9,3 +9,5 @@
 {"repo": "koaning/doubtlab", "pypi": "doubtlab"}
 {"repo": "fairlearn/fairlearn", "pypi": "fairlearn"}
 {"repo": "skrub-data/skrub", "pypi": "skrub"}
+{"repo": "DistrictDataLabs/yellowbrick", "pypi": "yellowbrick"}
+{"repo": "ploomber/sklearn-evaluation", "pypi": "sklearn-evaluation"}
