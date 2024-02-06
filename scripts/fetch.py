@@ -21,6 +21,7 @@ def fetch_pepy_info(project):
 
 @retry
 def fetch_info(repo, project):
+    print(f"Fetching for {repo=} {project=}")
     RELEVANT_KEYS = ["full_name", "description", "forks", "open_issues", "stargazers_count", "created_at", "pushed_at"]
     url = f"https://api.github.com/search/repositories?q={repo}"
     headers = {"Authorization": f"Bearer {os.environ.get('GH_TOKEN')}"}
