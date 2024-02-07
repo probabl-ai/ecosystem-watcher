@@ -1,3 +1,5 @@
+<img src="/images/probabl.png" width="125" height="125" align="right" />
+
 # 👀 ecosystem watcher
 
 This repository collects statistics for scikit-learn related plugins. The goal is to offer a resources for the community 
