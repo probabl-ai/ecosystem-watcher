@@ -1,3 +1,4 @@
+import datetime as dt 
 from tqdm import tqdm 
 from pathlib import Path
 import srsly 
@@ -32,6 +33,15 @@ def fetch_info(repo, project):
             result = {key: item[key] for key in RELEVANT_KEYS}
             return {**result, "repo": repo, "pip": project, "n_contributors": n_contributors, **fetch_pepy_info(project)}
 
-g = tqdm(list(srsly.read_jsonl("repos.jsonl")))
-out_path = Path(__file__).parent.parent / "docs" / "data.jsonl"
-srsly.write_jsonl(out_path, (fetch_info(ex['repo'], ex['pypi']) for ex in g))
+
+if __name__ == "__main__":
+    # Progress bar will also show print statements to help us debug in hindsight
+    today = str(dt.datetime.now())[:10]
+    g = tqdm(list(srsly.read_jsonl("repos.jsonl")))
+    site_out_path = Path(__file__).parent.parent / "docs" / "data.jsonl"
+    data_out_path = Path(__file__).parent.parent / "data" / f"{today}.jsonl"
+
+    # We want the most recent data on the site, but also a historical stamp
+    fetched_info = [fetch_info(ex['repo'], ex['pypi']) for ex in g]
+    srsly.write_jsonl(site_out_path, fetched_info)
+    srsly.write_jsonl(data_out_path, fetched_info)
