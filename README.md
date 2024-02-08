@@ -1,4 +1,4 @@
-<img src="/images/probabl.png" width="125" height="125" align="right" />
+<img src="/docs/images/probabl.png" width="125" height="125" align="right" />
 
 # Ecosystem Watcher
 
