@@ -8,6 +8,11 @@ on:
 jobs:
   scheduled:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write 
+      issues: none
+      packages: none
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
