@@ -1,10 +1,18 @@
 <img src="/images/probabl.png" width="125" height="125" align="right" />
 
-# 👀 ecosystem watcher
+# Ecosystem Watcher
 
 This repository collects statistics for scikit-learn related plugins. The goal is to offer a resources for the community 
 that gives an overview of useful tools, but it can also be helpful to track how projects develop over time. The goal of
 this repository is to address both these needs. 
+
+## Overview
+
+This repository uses Github Actions to scrape relevant information on a daily basis. This data then
+feeds an overview page that is hosted on the same repo. This is great because it means this page can
+update daily and we have a way for folks to contribute at the same time. 
+
+You can inspect the generated overview on [here](https://probabl-ai.github.io/ecosystem-watcher/).
 
 ## Add a project.
 
