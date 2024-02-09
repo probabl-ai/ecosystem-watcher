@@ -19,3 +19,4 @@
 {"repo": "skorch-dev/skorch", "pypi": "skorch"}
 {"repo": "adriangb/scikeras", "pypi": "scikeras"}
 {"repo": "scikit-learn-contrib/category_encoders", "pypi": "category_encoders"}
+{"repo": "scikit-multilearn/scikit-multilearn", "pypi": "scikit-multilearn"}
