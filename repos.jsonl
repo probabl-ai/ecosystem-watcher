@@ -20,3 +20,7 @@
 {"repo": "adriangb/scikeras", "pypi": "scikeras"}
 {"repo": "scikit-learn-contrib/category_encoders", "pypi": "category_encoders"}
 {"repo": "scikit-multilearn/scikit-multilearn", "pypi": "scikit-multilearn"}
+{"repo": "x-tabdeveloping/topicwizard", "pypi": "topic-wizard"}
+{"repo": "x-tabdeveloping/turftopic", "pypi": "turftopic"}
+{"repo": "centre-for-humanities-computing/tweetopic", "pypi": "tweetopic"}
+{"repo": "centre-for-humanities-computing/stormtrooper", "pypi": "stormtrooper"}
