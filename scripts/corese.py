@@ -13,7 +13,7 @@ for release in resp_releases.json():
         d['today'] = today
         data.append(d)
 
-srsly.write_jsonl(f"data/corese/github-{today}.jsonl", data, append=True, append_new_line=False)
+srsly.write_jsonl(f"data/corese/github-{today}.jsonl", data)
 
 
 # Handle all Flathub data
@@ -28,4 +28,4 @@ for name in ['CoreseCommand', 'CoreseGui']:
         'installs_last_7_days': downloads['installs_last_7_days'],
         'name': name,
     })
-srsly.write_jsonl(f"data/corese/flathub-{today}.jsonl", data, append=True, append_new_line=False)
+srsly.write_jsonl(f"data/corese/flathub-{today}.jsonl", data)
