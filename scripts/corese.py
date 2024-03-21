@@ -38,4 +38,4 @@ def fetch_flathub_stats():
 
 if __name__ == "__main__":
     fetch_github_stats()
-    fetch_github_stats()
+    fetch_flathub_stats()
