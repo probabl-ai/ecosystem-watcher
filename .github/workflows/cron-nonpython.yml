@@ -1,9 +1,9 @@
-name: Collect statistics
+name: Collect Non-Python statistics
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 4 * * *'
 
 jobs:
   scheduled:
@@ -22,9 +22,8 @@ jobs:
         PEPY_TOKEN: ${{secrets.PEPY}}
       run: |-
         python -m pip install -r requirements.txt
-        python scripts/fetch.py
-        python scripts/render.py
         python scripts/corese.py
+        python scripts/render.py
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
@@ -33,3 +32,4 @@ jobs:
         timestamp=$(date -u)
         git commit -m "Latest data: ${timestamp}" || exit 0
         git push
+ß
