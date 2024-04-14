@@ -29,3 +29,4 @@
 {"repo": "dmlc/xgboost", "pypi": "xgboost"}
 {"repo": "microsoft/LightGBM", "pypi": "lightgbm"}
 {"repo": "emlearn/emlearn", "pypi": "emlearn"}
+{"repo": "lmcinnes/umap", "pypi": "umap-learn"}
