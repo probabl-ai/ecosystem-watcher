@@ -14,6 +14,7 @@
 {"repo": "onnx/sklearn-onnx", "pypi": "skl2onnx"}
 {"repo": "unit8co/darts", "pypi": "darts"}
 {"repo": "sktime/sktime", "pypi": "sktime"}
+{"repo": "aeon-toolkit/aeon", "pypi": "aeon"}
 {"repo": "JoaquinAmatRodrigo/skforecast", "pypi": "skforecast"}
 {"repo": "tslearn-team/tslearn", "pypi": "tslearn"}
 {"repo": "skorch-dev/skorch", "pypi": "skorch"}
