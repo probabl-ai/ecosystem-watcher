@@ -4,7 +4,7 @@
 
 <h1 style="border-bottom: 0px;">Ecosystem Watcher</h1>
 
-This repository collects statistics for scikit-learn related plugins. The goal is to offer a resources for the community 
+This repository collects statistics for scikit-learn related plugins. The goal is to offer resources for the community 
 that gives an overview of useful tools, but it can also be helpful to track how projects develop over time. The goal of
 this repository is to address both these needs. 
 
