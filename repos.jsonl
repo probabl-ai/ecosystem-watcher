@@ -31,3 +31,6 @@
 {"repo": "microsoft/LightGBM", "pypi": "lightgbm"}
 {"repo": "emlearn/emlearn", "pypi": "emlearn"}
 {"repo": "lmcinnes/umap", "pypi": "umap-learn"}
+{"repo": "narwhals-dev/narwhals", "pypi": "narwhals"}
+{"repo": "pandas-dev/pandas", "pypi": "pandas"}
+{"repo": "pola-rs/polars", "pypi": "polars"}
