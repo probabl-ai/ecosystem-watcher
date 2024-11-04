@@ -1,3 +1,4 @@
+import logging
 import datetime as dt 
 from tqdm import tqdm 
 from pathlib import Path
@@ -6,11 +7,15 @@ import requests as rq
 from tenacity import retry
 from dotenv import load_dotenv
 import os
+import sys
+import datetime as dt
 
 load_dotenv()
+logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 
-@retry
+@retry(logging.DEBUG)
 def fetch_pepy_info(project):
     url = f"https://api.pepy.tech/api/v2/projects/{project}"
     headers = {"X-Api-Key": f"{os.environ.get('PEPY_TOKEN')}"}
@@ -22,7 +27,7 @@ def fetch_pepy_info(project):
 
 @retry
 def fetch_info(repo, project):
-    print(f"Fetching for {repo=} {project=}")
+    print(f"Fetching for {repo=} {project=} {dt.datetime.now()}")
     RELEVANT_KEYS = ["full_name", "description", "forks", "open_issues", "stargazers_count", "created_at", "pushed_at"]
     url = f"https://api.github.com/search/repositories?q={repo}"
     headers = {"Authorization": f"Bearer {os.environ.get('GH_TOKEN')}"}
