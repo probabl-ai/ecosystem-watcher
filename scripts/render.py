@@ -11,7 +11,10 @@ if __name__ == "__main__":
     data_path = Path(__file__).parent.parent / "docs" / "data.jsonl"
 
     items = list(srsly.read_jsonl(data_path))
-    items = sorted(items, key=lambda d: -d['month_downloads'])
+    
+    # It seems like some non-values can appear if a backend does not return something. 
+    # That is janky, but a quick fix does suffice below.
+    items = sorted([i for i in items if i], key=lambda d: -d['month_downloads'])
     
     # Loop over items, printing so hindsight debugging is easier
     for item in items:
