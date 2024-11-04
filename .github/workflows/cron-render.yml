@@ -1,9 +1,9 @@
-name: Collect Python statistics
+name: Render new site
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '1 5 * * *'
 
 jobs:
   scheduled:
