@@ -34,3 +34,4 @@
 {"repo": "narwhals-dev/narwhals", "pypi": "narwhals"}
 {"repo": "pandas-dev/pandas", "pypi": "pandas"}
 {"repo": "pola-rs/polars", "pypi": "polars"}
+{"repo": "probabl-ai/skore", "pypi": "skore"}
