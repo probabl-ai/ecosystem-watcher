@@ -35,3 +35,4 @@
 {"repo": "pandas-dev/pandas", "pypi": "pandas"}
 {"repo": "pola-rs/polars", "pypi": "polars"}
 {"repo": "probabl-ai/skore", "pypi": "skore"}
+{"repo": "MaartenGr/BERTopic", "pypi": "bertopic"}
