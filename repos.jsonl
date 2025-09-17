@@ -39,6 +39,7 @@
 {"repo": "pandas-dev/pandas", "pypi": "pandas"}
 {"repo": "pola-rs/polars", "pypi": "polars"}
 {"repo": "probabl-ai/skore", "pypi": "skore"}
+{"repo": "MaartenGr/BERTopic", "pypi": "bertopic"}
 {"repo": "online-ml/river", "pypi": "river"}
 {"repo": "yzhao062/pyod", "pypi": "pyod"}
 {"repo": "sebp/scikit-survival", "pypi": "scikit-survival"}
